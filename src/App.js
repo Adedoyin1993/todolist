@@ -29,8 +29,7 @@ class App extends Component{
   }
 
   // Delete Todo
-  deleTodo = (id) => {
-    // eslint-disable-next-line
+  delTodo = (id) => {
     axios.delete('https://jsonplaceholder.typicode.com/todos/${id}')
     .then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] }));
 
